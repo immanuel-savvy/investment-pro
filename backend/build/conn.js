@@ -1,0 +1,62 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.gds = exports.default = exports.WITHDRAWAL_REQUESTS = exports.WALLET_ADDRESSES = exports.WALLETS = exports.USER_REQUESTS = exports.USERS_INVESTS = exports.USERS_HASH = exports.USERS = exports.TRENDING_ARTICLES = exports.TOPUP_REQUESTS = exports.TEAM_MEMBER = exports.RUNNING_INVESTMENTS = exports.REVIEWS = exports.REPLIES = exports.INVESTS = exports.INVESTMENTS_INVESTS = exports.INVESTMENTS = exports.GLOBALS = exports.CURRENCIES = exports.COMMENTS = exports.ARTICLE_CATEGORIES = exports.ARTICLES = exports.ADMIN_HASH = exports.ADMINSTRATORS = void 0;
+var _generalisedDatastore = _interopRequireDefault(require("generalised-datastore"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var gds;
+exports.gds = gds;
+var USERS, ADMINSTRATORS, ADMIN_HASH, ARTICLES, ARTICLE_CATEGORIES, TRENDING_ARTICLES, USERS_HASH, GLOBALS, COMMENTS, INVESTMENTS, REVIEWS, WITHDRAWAL_REQUESTS, TOPUP_REQUESTS, RUNNING_INVESTMENTS, WALLETS, CURRENCIES, INVESTS, TEAM_MEMBER, USERS_INVESTS, INVESTMENTS_INVESTS, USER_REQUESTS, WALLET_ADDRESSES, REPLIES;
+exports.REPLIES = REPLIES;
+exports.WALLET_ADDRESSES = WALLET_ADDRESSES;
+exports.USER_REQUESTS = USER_REQUESTS;
+exports.INVESTMENTS_INVESTS = INVESTMENTS_INVESTS;
+exports.USERS_INVESTS = USERS_INVESTS;
+exports.TEAM_MEMBER = TEAM_MEMBER;
+exports.INVESTS = INVESTS;
+exports.CURRENCIES = CURRENCIES;
+exports.WALLETS = WALLETS;
+exports.RUNNING_INVESTMENTS = RUNNING_INVESTMENTS;
+exports.TOPUP_REQUESTS = TOPUP_REQUESTS;
+exports.WITHDRAWAL_REQUESTS = WITHDRAWAL_REQUESTS;
+exports.REVIEWS = REVIEWS;
+exports.INVESTMENTS = INVESTMENTS;
+exports.COMMENTS = COMMENTS;
+exports.GLOBALS = GLOBALS;
+exports.USERS_HASH = USERS_HASH;
+exports.TRENDING_ARTICLES = TRENDING_ARTICLES;
+exports.ARTICLE_CATEGORIES = ARTICLE_CATEGORIES;
+exports.ARTICLES = ARTICLES;
+exports.ADMIN_HASH = ADMIN_HASH;
+exports.ADMINSTRATORS = ADMINSTRATORS;
+exports.USERS = USERS;
+var ds_conn = function ds_conn() {
+  exports.gds = gds = new _generalisedDatastore.default("investment_pro").sync();
+  exports.REVIEWS = REVIEWS = gds.folder("reviews");
+  exports.ADMINSTRATORS = ADMINSTRATORS = gds.folder("adminstrators");
+  exports.USERS = USERS = gds.folder("users");
+  exports.RUNNING_INVESTMENTS = RUNNING_INVESTMENTS = gds.folder("running_investments", null, "invest");
+  exports.USERS_INVESTS = USERS_INVESTS = gds.folder("user_invests", "user", "invest");
+  exports.TEAM_MEMBER = TEAM_MEMBER = gds.folder("team_members");
+  exports.INVESTMENTS_INVESTS = INVESTMENTS_INVESTS = gds.folder("investment_invests", "investment", "invest");
+  exports.INVESTS = INVESTS = gds.folder("invests", null, "investment");
+  exports.ARTICLES = ARTICLES = gds.folder("articles", null, "categories");
+  exports.ARTICLE_CATEGORIES = ARTICLE_CATEGORIES = gds.folder("article_categories");
+  exports.TRENDING_ARTICLES = TRENDING_ARTICLES = gds.folder("trending_articles", null, "article");
+  exports.WALLET_ADDRESSES = WALLET_ADDRESSES = gds.folder("wallet_addresses", "wallet");
+  exports.WALLETS = WALLETS = gds.folder("wallets");
+  exports.USER_REQUESTS = USER_REQUESTS = gds.folder("user_requests", "user", "request");
+  exports.INVESTMENTS = INVESTMENTS = gds.folder("investments", null, "currency");
+  exports.TOPUP_REQUESTS = TOPUP_REQUESTS = gds.folder("topup_requests", null, new Array("user", "currency"));
+  exports.WITHDRAWAL_REQUESTS = WITHDRAWAL_REQUESTS = gds.folder("withdrawal_requests", null, new Array("user", "currency"));
+  exports.CURRENCIES = CURRENCIES = gds.folder("currencies");
+  exports.COMMENTS = COMMENTS = gds.folder("comments", "item");
+  exports.REPLIES = REPLIES = gds.folder("replies", "comment");
+  exports.ADMIN_HASH = ADMIN_HASH = gds.folder("admin_hash", "admin");
+  exports.GLOBALS = GLOBALS = gds.folder("globals", "global");
+  exports.USERS_HASH = USERS_HASH = gds.folder("user_hash", "user");
+};
+var _default = ds_conn;
+exports.default = _default;

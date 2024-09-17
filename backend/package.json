@@ -1,0 +1,29 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Backend.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon -r esm Backend.js",
+    "build": "babel  ./handlers/starter.js ./handlers/settings.js ./ds/conn.js ./handlers/investments.js ./routes.js -d build"
+  },
+  "author": "Savv",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "generalised-datastore": "^1.7.85",
+    "nodemailer": "^6.9.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.15",
+    "@babel/core": "^7.22.15",
+    "apidoc": "^0.54.0",
+    "babel-preset-env": "^1.7.0",
+    "esm": "^3.2.25",
+    "nodemon": "^2.0.22"
+  }
+}

@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.cert_body {
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.certificate {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  margin: 50px auto;
+  padding: 30px;
+  width: 800px;
+}
+
+.certificate-content {
+  text-align: center;
+}
+
+.certificate-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.recipient-name {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.course-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.organization-name {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.completion-date {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.certificate-footer {
+  margin-top: 40px;
+  text-align: right;
+}
+
+.signature {
+  font-size: 20px;
+  font-weight: bold;
+}

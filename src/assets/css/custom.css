@@ -1,0 +1,48 @@
+.body {
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+}
+
+.hero_banner {
+  scroll-snap-align: start;
+}
+
+.nav-menu li {
+  text-transform: capitalize;
+}
+
+.footer-menu li {
+  text-transform: capitalize;
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+div::-webkit-scrollbar {
+  display: none;
+}
+
+div {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.my_stylus {
+  background-color: #fc3;
+  padding: 15px;
+  border-radius: 10;
+  cursor: pointer;
+}
+
+.my_stylus :hover {
+}
+
+.fixed_on_page_box {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+  z-index: 99999999;
+}
